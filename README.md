@@ -11,7 +11,7 @@
 
 ## 5. Screenshot
 -   ### .include_router
-![include_router](Screenshot\include_router.JPG)
+![include_router]((https://github.com/pranabkumarpaul/FastAPI_Backend/blob/main/Screenshot/include_router.JPG))
 
 -   ### .mount - email
 ![mount_email](Screenshot\mount_email.JPG)
