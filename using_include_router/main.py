@@ -1,3 +1,6 @@
+##################################
+# Using Include Router ###########
+
 from fastapi import FastAPI, Depends, HTTPException, APIRouter
 from starlette.middleware.cors import CORSMiddleware
 import uvicorn
@@ -34,7 +37,7 @@ app.add_middleware(
 app.include_router(email_routes.email, prefix= BASE_PATH.format(ENV= 'dev'))
 app.include_router(dashboard_routes.dashboard, prefix= BASE_PATH.format(ENV= 'dev'))
 
-# if __name__ == "__main__":
-#     uvicorn.run("main:app", host= LOCAL_HOST, port= PORT, reload= True)
+if __name__ == "__main__":
+    uvicorn.run("main:app", host= LOCAL_HOST, port= PORT, reload= True)
 
 # # http://127.0.0.1:8090/api/dev/docs

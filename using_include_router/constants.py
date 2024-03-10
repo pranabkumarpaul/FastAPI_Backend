@@ -8,7 +8,7 @@ INSERT INTO public.email
 (id, dept, email_id, subject, body)
 VALUES({ID}, '{DEPT}', '{EMAIL_ID}', '{SUBJECT}', '{BODY}');
 """
-GET_EMAIL_DETAILS_QUERY= """
+GET_EMAIL_QUERY= """
 select * from public.email where dept = '{DEPT}' and email_id = '{EMAIL_ID}';
 """
 

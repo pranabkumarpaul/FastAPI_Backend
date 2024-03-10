@@ -7,7 +7,7 @@ async def get_all_email_details_data():
 
 async def get_email_details_data(user_data):
     DATA= await run_sql(operation_type= '', 
-                        query= GET_EMAIL_DETAILS_QUERY.format(DEPT= user_data.dept ,
+                        query= GET_EMAIL_QUERY.format(DEPT= user_data.dept ,
                                                               EMAIL_ID= user_data.email_id
                                                               )
                                                     )

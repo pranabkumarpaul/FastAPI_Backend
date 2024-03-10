@@ -11,9 +11,11 @@ class email_details_model(BaseModel):
     class config:
         orm_mode = True
 
-class email_details_model(BaseModel):
+class email_query_model(BaseModel):
     dept : str
     email_id : str
 
     class config:
         orm_mode = True
+
+        
