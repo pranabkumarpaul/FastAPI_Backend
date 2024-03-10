@@ -1,8 +1,11 @@
 import json
+import pathlib
 import asyncpg
 import asyncio
 
-with open('config.json', 'r') as conf:
+Config_File_Path= str(pathlib.Path(__file__).parent.parent) + "\config.json"
+
+with open(Config_File_Path, 'r') as conf:
     data= json.loads(conf.read())
     conf.close()
 
@@ -39,4 +42,5 @@ async def run_sql( query , operation_type= ''):
     finally:
         await conn.close()
         print("Connection close")
-
+    
+    

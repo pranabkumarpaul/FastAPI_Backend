@@ -1,0 +1,9 @@
+{"database_connection":
+                    {
+                      "user" : "postgres",
+                      "password" : "MySql_1234",
+                      "host" : "localhost",
+                      "port" : 5432,
+                      "database": "postgres"
+                    }
+}
