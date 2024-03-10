@@ -2,5 +2,4 @@
 
 ## 2. prepare environment
 -   ### python -m venv venv
--   ### pip install fastapi
--   ### pip install psycopg2
+-   ### pip install -r .\requirements.txt
