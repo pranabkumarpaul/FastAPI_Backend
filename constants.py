@@ -3,3 +3,5 @@ PORT= 8090
 BASE_PATH= "/api/{}"
 
 GET_EMAIL_DETAILS_QUERY= "select * from public.email;"
+
+GET_SALES_DETAILS_QUERY= "select * from public.sales;"

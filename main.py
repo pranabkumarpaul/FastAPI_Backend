@@ -3,7 +3,7 @@ from starlette.middleware.cors import CORSMiddleware
 import uvicorn
 from constants import *
 from routes import (
-    email_routes ,
+    email_routes , dashboard_routes
 )
 
 app = FastAPI()
@@ -28,8 +28,9 @@ app.add_middleware(
 )
 
 app.mount(path= "/email", app= email_routes.email)
+app.mount(path= "/dashboard", app= dashboard_routes.dashboard)
 
-# if __name__ == "__main__":
-#     uvicorn.run("main:app", host= LOCAL_HOST, port= PORT, reload= True)
+if __name__ == "__main__":
+    uvicorn.run("main:app", host= LOCAL_HOST, port= PORT, reload= True)
 
 # # http://127.0.0.1:8090/email/docs
