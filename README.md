@@ -11,10 +11,10 @@
 
 ## 5. Screenshot
 -   ### .include_router
-![include_router](Screenshot\include_router.JPG)
+![include_router](/Screenshot/include_router.JPG)
 
 -   ### .mount - email
-![mount_email](Screenshot\mount_email.JPG)
+![mount_email](/Screenshot/mount_email.JPG)
 
 -   ### .mount - dashboard
-![mount_Dashboard](Screenshot\mount_dashboard.JPG)
+![mount_Dashboard](/Screenshot/mount_dashboard.JPG)
