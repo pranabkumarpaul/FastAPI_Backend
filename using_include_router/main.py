@@ -7,7 +7,10 @@ from routes import (
     dashboard_routes
 )
 
-app = FastAPI()
+app = FastAPI(docs_url= BASE_PATH.format(ENV= 'dev') + "/docs",
+              openapi_url= BASE_PATH.format(ENV= 'dev') + "/openapi.json"
+              )
+# app = FastAPI()
 
 # origins = ["http://localhost", "http://localhost:8090", ]
 
@@ -28,11 +31,10 @@ app.add_middleware(
     allow_headers= ["*"],
 )
 
-app.mount(path= "/email", app= email_routes.email)
-app.mount(path= "/dashboard", app= dashboard_routes.dashboard)
+app.include_router(email_routes.email, prefix= BASE_PATH.format(ENV= 'dev'))
+app.include_router(dashboard_routes.dashboard, prefix= BASE_PATH.format(ENV= 'dev'))
 
-if __name__ == "__main__":
-    uvicorn.run("main:app", host= LOCAL_HOST, port= PORT, reload= True)
+# if __name__ == "__main__":
+#     uvicorn.run("main:app", host= LOCAL_HOST, port= PORT, reload= True)
 
-# # http://127.0.0.1:8090/email/api/dev/docs
-# # http://127.0.0.1:8090/dashboard/api/dev/docs
+# # http://127.0.0.1:8090/api/dev/docs
