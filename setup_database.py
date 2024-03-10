@@ -7,7 +7,10 @@ INSERT_DATA_TO_EMAIL_TBL= """
 insert into public.email values
 (1, 'IT', '61169test@gmail.com', 'sub - IT', 'This is IT dept.'),
 (2, 'BPO', '61169test@gmail.com', 'sub - BPO', 'This is BPO dept.'),
-(3, 'HR', '61169test@gmail.com', 'sub - HR', 'This is HR dept.');
+(3, 'BPO', '61169test@gmail.com', 'sub - BPO', 'This is BPO dept.'),
+(4, 'BPO', 'test@gmail.com', 'sub - BPO', 'This is BPO dept.'),
+(5, 'BPO', 'test@gmail.com', 'sub - BPO', 'This is BPO dept.'),
+(6, 'HR', '61169test@gmail.com', 'sub - HR', 'This is HR dept.');
 """
 
 CREATE_SALES_TBL= "create table sales(region varchar(15), sales int);"
@@ -16,7 +19,7 @@ INSERT_DATA_TO_SALES_TBL= """
 insert into sales values ('east', 200), ('west', 12578), ('north', 6512700), ('south', 3111);
 """
 
-from common_utility.database import run_sql
+from using_include_router.common_utility.database import run_sql
 import asyncio
 
 if __name__ == '__main__':

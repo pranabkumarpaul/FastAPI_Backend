@@ -7,6 +7,13 @@ class email_details_model(BaseModel):
     email_id : str
     subject : str
     body : str
+    
+    class config:
+        orm_mode = True
+
+class email_details_model(BaseModel):
+    dept : str
+    email_id : str
 
     class config:
         orm_mode = True
